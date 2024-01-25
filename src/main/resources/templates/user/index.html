@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+
+
+<a th:href="@{/}">Link to menu</a>
+
+<th:block th:if="${users}">
+
+    <ul>
+        <li th:each="user : ${users}">
+          <a th:href="@{'/user/details?userId=' + ${user.id}}" th:text="${user.username}"></a>
+        </li>
+    </ul>
+
+        </table>
+    </div>
+
+
+</th:block>
+
+</body>
+</html>
